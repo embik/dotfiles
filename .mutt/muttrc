@@ -1,0 +1,72 @@
+set folder = "~/.mail"
+set tmpdir = "~/.tmp"
+
+source ~/.mutt/mailboxes
+
+# Default mailbox
+set spoolfile = "+mail@embik.me/INBOX"
+
+# Speed up folder switching
+set sleep_time = 0
+
+unset markers
+set smart_wrap = yes
+set check_new = yes
+
+# Formats
+set date_format     = "%d.%m.%y %k:%M"
+set index_format    = "%3C %Z %D %-20.18F  %s"
+
+# Composing mails
+set send_charset    = "utf-8"
+set realname        = "Marvin Beckers"
+set forward_format  = "Fwd: %s"
+set attribution     = "On %d, %n wrote:"
+
+set edit_headers
+set reply_to
+set reverse_name
+
+# Handle HTML mails
+auto_view           text/html
+alternative_order   text/plain text/enriched text/html
+
+set mailcap_path    = ~/.mutt/mailcap
+
+# Hide mail headers
+ignore *
+unignore from date object to cc
+unignore posted-to
+hdr_order date object from to cc posted-to
+
+# Sort mails by date and threads
+set sort_aux        = last-date-received
+set sort            = reverse-threads
+set sort_browser    = date
+set sort_re
+
+# Pager behaviour
+set pager_stop = yes
+
+# Sidebar configuration and keybindings
+#set sidebar_visible = yes
+set sidebar_width=35
+set sidebar_short_path
+set sidebar_delim_chars="/"
+set sidebar_folder_indent
+set sidebar_indent_string=" "
+
+bind index,pager B sidebar-toggle-visible
+bind index,pager \CP sidebar-prev
+bind index,pager \C<Up> sidebar-next
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+
+#macro index Z   "<shell-escape>/usr/bin/offlineimap -u blinkenlights -o <enter>" "sync IMAP"
+
+source ~/.mutt/colors
+source ~/.mutt/crypto
+source ~/.mutt/smime
+
+folder-hook embikme/*   source ~/.mutt/embikme.muttrc
+folder-hook rwth/*      source ~/.mutt/rwth.muttrc
