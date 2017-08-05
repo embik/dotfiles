@@ -1,0 +1,9 @@
+#/usr/bin/env bash
+
+# start user dbus session
+systemctl --user start dbus
+
+# set keyboard layout (de)
+export XKB_DEFAULT_LAYOUT=de
+
+sway --verbose > /home/embik/.tmp/sway.log 2>&1
