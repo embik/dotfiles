@@ -1,0 +1,16 @@
+set font "FiraMono 13"
+
+set default-bg "#1f1f1f"
+set default-fg "#c0b18b"
+
+set statusbar-h-padding "16"
+set statusbar-v-padding "16"
+
+set statusbar-fg "#1f1f1f"
+set statusbar-bg "#98971a"
+
+set scroll-page-aware "true"
+set smooth-scroll "true"
+
+set guioptions "s"
+set window-title-home-tilde "true"
