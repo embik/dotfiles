@@ -1,0 +1,17 @@
+.config/nvim/plugged
+.config/nvim/autoload
+.config/nvim/.netrwhist
+
+.config/mopidy/mopidy.conf
+
+.config/mpv/watch_later
+
+.config/newsbeuter/history*
+.config/newsbeuter/cache.db
+
+.mutt/mailboxes
+.mutt/*.muttrc
+
+*~
+
+.ssh/

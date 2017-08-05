@@ -1,0 +1,12 @@
+[user]
+	email = mail@embik.me
+    name = Marvin Beckers
+    signingKey = 16BBDAF5F2FF6D9A
+[alias]
+    undo = reset --soft HEAD^
+    stash-all = stash save --include-untracked
+    glog = log --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s%Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[commit]
+    gpgsign = true
+[credential]
+	helper = cache
