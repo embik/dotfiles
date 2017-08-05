@@ -1,0 +1,2 @@
+bindsym XF86MonBrightnessUp exec xbacklight -set $(expr $(xbacklight -get) + 5) && pkill -SIGRTMIN+16 i3blocks
+bindsym XF86MonBrightnessDown exec xbacklight -set $(expr $(xbacklight -get) - 5) && pkill -SIGRTMIN+16 i3blocks

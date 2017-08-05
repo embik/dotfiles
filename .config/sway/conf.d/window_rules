@@ -1,0 +1,3 @@
+for_window [id="gnome-font-viewer"] border none
+for_window [id="solaar"] floating enable
+for_window [class="jetbrains-studio"] border pixel 2

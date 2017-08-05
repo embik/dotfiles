@@ -1,0 +1,41 @@
+bar {
+    output eDP-1
+    position bottom
+    status_command i3blocks
+    font pango:MonacoB, FontAwesome 11
+    height 30
+
+    strip_workspace_numbers yes
+
+    colors {
+        statusline  #ebdbb2
+        background  #303030
+        separator   #505050
+
+        focused_workspace   #505050 #202020 #ebdbb2
+        inactive_workspace  #303030 #303030 #ebdbb2
+
+        binding_mode        #505050 #202020 #ebdbb2
+    }
+}
+
+
+bar {
+    output DP-3
+    position bottom
+    status_command i3blocks
+    font pango:MonacoB, FontAwesome 10
+    height 26
+
+    strip_workspace_numbers yes
+
+    colors {
+        statusline #ebdbb2
+        background #303030
+
+        focused_workspace   #505050 #202020 #ebdbb2
+        inactive_workspace  #303030 #303030 #ebdbb2
+
+        binding_mode        #505050 #202020 #ebdbb2
+    }
+}

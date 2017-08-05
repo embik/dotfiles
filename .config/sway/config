@@ -1,0 +1,140 @@
+set $mod Mod4
+set $term env WAYLAND_DISPLAY= alacritty
+set $browser chromium-browser
+set $menu j4-dmenu-desktop --no-generic --term=termite --dmenu="dmenu -i -fn 'MonacoB-11.5' -sb '#b8bb26' -nb '#303030' -nf '#ebdbb2' -sf '#1f1f1f'"
+set $lockscreen ~/.local/bin/lock-screen
+
+font pango:Hack 10
+
+gaps inner 28
+gaps outer 0
+
+default_border pixel 2
+default_floating_border none
+hide_edge_borders both
+
+### Key bindings
+# start a terminal
+bindsym $mod+Return exec $term
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start your launcher
+bindsym $mod+d exec $menu
+
+# lock screen
+bindsym $mod+l exec $lockscreen
+
+# open browser
+bindsym $mod+i exec $browser
+
+floating_modifier $mod normal
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# exit sway (logs you out of your wayland session)
+bindsym $mod+Shift+e exit
+
+# move focus around
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move windows around
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+set $workspace1 1:I
+set $workspace2 2:II
+set $workspace3 3:III
+set $workspace4 4:IV
+set $workspace5 5:V
+#set $workspace5 5:
+set $workspace6 6:VI
+set $workspace7 7:VII
+set $workspace8 8:VIII
+set $workspace9 9:IX
+set $workspace10 10:X
+
+workspace $workspace1 output DP-3
+workspace $workspace9 output eDP-1
+
+# switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# switch through workspaces
+bindsym $mod+Alt+Left workspace prev
+bindsym $mod+Alt+Right workspace next
+
+# split containers
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# make the current focus fullscreen
+bindsym $mod+f fullscreen
+
+# toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+
+# swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# move focus to the parent container
+bindsym $mod+a focus parent
+
+# resize focused window
+#bindsym $mod+p resize grow width 10
+#bindsym $mod+m resize shrink width 10
+#bindsym $mod+Shift+p resize grow height 10
+#bindsym $mod+Shift+m resize shrink height 10
+
+mode "resize" {
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+include ~/.config/sway/conf.d/*
+include ~/.config/sway/conf.d/`hostname\ -s`/*
+
+workspace $workspace1
+
+# read Xresources file
+exec xrdb ~/.Xresources
