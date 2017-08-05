@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+SSID_NAME=$(/sbin/iwgetid -r)
+
+if [[ "${SSID_NAME}" != "" ]]; then
+    echo "${SSID_NAME}"
+else
+    echo "[not connected]"
+fi
