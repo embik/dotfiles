@@ -1,10 +1,12 @@
 # oh-my-zsh stuff
 export ZSH=/home/embik/.oh-my-zsh
+export ZSH_CUSTOM=/home/embik/.local/zsh
 
-ZSH_THEME="kolo-lambda"
+ZSH_THEME="kolo-embi"
 plugins=(pass git pip python sudo tmux colored-man-pages last-working-dir docker)
 
 source $ZSH/oh-my-zsh.sh
+
 
 # Preferred editor
 export EDITOR='nvim'
