@@ -60,11 +60,11 @@ colorscheme gruvbox
 set background=dark
 
 hi clear SignColumn
-hi SignColumn ctermbg=235
-hi GitGutterAdd ctermbg=235
-hi GitGutterChange ctermbg=235
-hi GitGutterDelete ctermbg=235
-hi GitGutterChangeDelete ctermbg=235
+hi SignColumn               ctermbg=235
+hi GitGutterAdd             ctermbg=235
+hi GitGutterChange          ctermbg=235
+hi GitGutterDelete          ctermbg=235
+hi GitGutterChangeDelete    ctermbg=235
 
 hi clear VertSplit
 hi VertSplit ctermbg=235 ctermfg=235
