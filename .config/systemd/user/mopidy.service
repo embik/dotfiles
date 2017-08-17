@@ -1,0 +1,10 @@
+[Unit]
+Description=mopidy media server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mopidy --quiet
+
+[Install]
+WantedBy=default.target
