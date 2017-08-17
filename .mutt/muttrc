@@ -68,5 +68,5 @@ source ~/.mutt/colors
 source ~/.mutt/crypto
 source ~/.mutt/smime
 
-folder-hook embikme/*   source ~/.mutt/embikme.muttrc
+folder-hook mail@embik.me/*   source ~/.mutt/embikme.muttrc
 folder-hook rwth/*      source ~/.mutt/rwth.muttrc
