@@ -2,7 +2,7 @@ bar {
     output eDP-1
     position bottom
     status_command i3blocks
-    font pango:MonacoB, FontAwesome 11
+    font pango:Roboto Condensed, FontAwesome 11
     height 30
 
     strip_workspace_numbers yes
@@ -24,7 +24,7 @@ bar {
     output DP-3
     position bottom
     status_command i3blocks
-    font pango:MonacoB, FontAwesome 10
+    font pango:Roboto Condensed, FontAwesome 10
     height 26
 
     strip_workspace_numbers yes

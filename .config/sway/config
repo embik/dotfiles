@@ -1,10 +1,10 @@
 set $mod Mod4
 set $term env WAYLAND_DISPLAY= alacritty
 set $browser chromium-browser
-set $menu j4-dmenu-desktop --no-generic --term=termite --dmenu="dmenu -i -fn 'MonacoB-11.5' -sb '#b8bb26' -nb '#303030' -nf '#ebdbb2' -sf '#1f1f1f'"
+set $menu j4-dmenu-desktop --no-generic --term=termite --dmenu="dmenu -i -fn 'RobotoCondensed-11.5' -sb '#b8bb26' -nb '#303030' -nf '#ebdbb2' -sf '#1f1f1f'"
 set $lockscreen ~/.local/bin/lock-screen
 
-font pango:Hack 10
+font pango:FiraMono 10
 
 gaps inner 28
 gaps outer 0
@@ -54,7 +54,7 @@ set $workspace2 2:II
 set $workspace3 3:III
 set $workspace4 4:IV
 set $workspace5 5:V
-#set $workspace5 5:
+#set $workspace5 5:
 set $workspace6 6:VI
 set $workspace7 7:VII
 set $workspace8 8:VIII
@@ -134,7 +134,7 @@ bindsym $mod+r mode "resize"
 include ~/.config/sway/conf.d/*
 include ~/.config/sway/conf.d/`hostname\ -s`/*
 
-workspace $workspace1
+workspace 1:I
 
 # read Xresources file
 exec xrdb ~/.Xresources
