@@ -1,6 +1,7 @@
 set $mod Mod4
-set $term env WAYLAND_DISPLAY= alacritty
-set $browser chromium-browser
+#set $term env WAYLAND_DISPLAY= alacritty
+set $term /usr/bin/termite
+set $browser /usr/bin/firefox
 set $menu j4-dmenu-desktop --no-generic --term=termite --dmenu="dmenu -i -fn 'RobotoCondensed-11.5' -sb '#b8bb26' -nb '#303030' -nf '#ebdbb2' -sf '#1f1f1f'"
 set $lockscreen ~/.local/bin/lock-screen
 
@@ -113,12 +114,6 @@ bindsym $mod+space focus mode_toggle
 # move focus to the parent container
 bindsym $mod+a focus parent
 
-# resize focused window
-#bindsym $mod+p resize grow width 10
-#bindsym $mod+m resize shrink width 10
-#bindsym $mod+Shift+p resize grow height 10
-#bindsym $mod+Shift+m resize shrink height 10
-
 mode "resize" {
     bindsym Left resize shrink width 10 px or 10 ppt
     bindsym Down resize grow height 10 px or 10 ppt
@@ -136,5 +131,6 @@ include ~/.config/sway/conf.d/`hostname\ -s`/*
 
 workspace 1:I
 
-# read Xresources file
-exec xrdb ~/.Xresources
+# start libinput-gestures
+exec --no-startup-id libinput-gestures
+exec --no-startup-id dunst
