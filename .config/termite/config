@@ -1,0 +1,82 @@
+[options]
+decorated = false
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = MonacoB Bold 11.5
+scrollback_lines = 10000
+search_wrap = true
+
+cursor_blink = system
+cursor_shape = block
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+#browser = xdg-open
+
+# set size hints for the window
+#size_hints = false
+
+# Hide links that are no longer valid in url select overlay mode
+filter_unmatched_urls = true
+
+# emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+[colors]
+
+# special
+foreground      = #ebdbb2
+foreground_bold = #ebdbb2
+background      = #282828
+#background      = rgba(40, 40, 40, 0.95)
+cursor          = #ebdbb2
+
+# black
+color0  = #282828
+color8  = #928374
+
+# red
+color1  = #cc241d
+color9  = #fb4934
+
+# green
+color2  = #98971a
+color10 = #b8bb26
+
+# yellow
+color3  = #d79921
+color11 = #fabd2f
+
+# blue
+color4  = #458588
+color12 = #83a598
+
+# magenta
+color5  = #b16286
+color13 = #d3869b
+
+# cyan
+color6  = #689d6a
+color14 = #8ec07c
+
+# white
+color7  = #a89984
+color15 = #ebdbb2
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
+# vim: ft=dosini cms=#%s
