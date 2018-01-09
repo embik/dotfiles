@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/udiskie -a -N -c /home/embik/.config/udiskie/config.yml
+ExecStart=/usr/bin/udiskie -a -n -c /home/embik/.config/udiskie/config.yml
 
 [Install]
 WantedBy=default.target
