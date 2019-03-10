@@ -34,7 +34,7 @@
 	"network": {
 		"format-wifi": "{essid} ({signalStrength}%)  ",
 		"format-disconnected": "Disconnected",
-        "on-click": "nm-connection-edtior"
+        "on-click": "nm-connection-editor"
 	},
     "backlight": {
         "format": "{percent}%  {icon}",
