@@ -1,7 +1,7 @@
 {
     "layer": "top",
 	"position": "bottom",
-    "modules-left": ["custom/workspace", "sway/workspaces", "sway/mode"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
     "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
     "sway/workspaces": {
