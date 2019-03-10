@@ -34,10 +34,6 @@ window#waybar {
     margin: 0 5px;
 }
 
-#idle_inhibitor {
-    padding-bottom: 6px;
-}
-
 @keyframes blink {
     to {
         background-color: #ffffff;

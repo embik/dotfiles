@@ -16,6 +16,13 @@
         "interval": 1,
         "exec": "swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .current_workspace'"
     },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "deactivated": " ",
+            "activated": " "
+        }
+    },
 	"pulseaudio": {
         "format": "{volume}%  {icon}",
         "format-icons": {
