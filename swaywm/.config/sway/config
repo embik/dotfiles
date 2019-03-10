@@ -20,6 +20,9 @@ set $term alacritty
 #set $menu dmenu_path | dmenu | xargs swaymsg exec
 set $menu rofi -show drun | xargs swaymsg exec
 
+# Run pass and rofi to quickly access passwords
+set $password ~/.local/bin/gopass ls -f | rofi -dmenu | xargs -i ~/.local/bin/gopass -c {}
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
@@ -33,7 +36,9 @@ output * bg /home/embik/Bilder/Wallpapers/WFPw2.jpg fill
 
 ### Idle configuration
 #
-# Example configuration:
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
 #
 exec swayidle -w \
     timeout 300 '~/.local/bin/generate-lockscreen && swaylock -f -i /home/embik/.local/share/lock/lockscreen.png' \
@@ -44,10 +49,6 @@ exec swayidle -w \
 # lockscreen
 # (sleep before entering idle state to let the user lift keys)
 bindsym $mod+l exec "sleep 1; pkill -USR1 swayidle"
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 default_border pixel 2
 default_floating_border pixel 2
@@ -89,6 +90,9 @@ bindsym $mod+Shift+q kill
 
 # start your launcher
 bindsym $mod+d exec $menu
+
+# start password manager
+bindsym $mod+p exec $password
 
 # volume controls (special keys on keyboard)
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
