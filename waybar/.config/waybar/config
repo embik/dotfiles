@@ -1,7 +1,7 @@
 {
     "layer": "top",
 	"position": "bottom",
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": ["custom/workspace", "sway/workspaces", "sway/mode"],
     "modules-center": [],
     "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
     "sway/workspaces": {
@@ -10,6 +10,11 @@
             "default": "",
             "focused": ""
         }
+    },
+    "custom/workspace": {
+        "format": "[ {} ]",
+        "interval": 1,
+        "exec": "swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .current_workspace'"
     },
 	"pulseaudio": {
         "format": "{volume}%  {icon}",
