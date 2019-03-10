@@ -1,0 +1,6 @@
+rofi.modi: run,drun,ssh
+rofi.font:  overpass 14
+rofi.width: 25
+rofi.lines: 5
+rofi.terminal: alacritty
+rofi.theme: /usr/share/rofi/themes/Monokai.rasi
