@@ -55,6 +55,8 @@ default_floating_border pixel 2
 gaps outer 8
 gaps inner 2
 
+# Be smart about borders and gaps
+smart_borders on
 smart_gaps on
 
 ### Input configuration
