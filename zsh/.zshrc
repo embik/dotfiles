@@ -82,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Gopath configuration
-export GOPATH=/home/embik/Workspace/Go
+export GOPATH=$HOME/Workspace/Go
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
