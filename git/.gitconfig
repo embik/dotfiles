@@ -4,7 +4,7 @@
 	signingkey = C0717FEDDBCA273F3E6BF3B316BBDAF5F2FF6D9A
 [credential]
 	helper = cache
-#[commit]
-#	gpgsign = true
+[commit]
+	gpgsign = true
 [gpg]
 	program = gpg2
