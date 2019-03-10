@@ -96,6 +96,7 @@ alias ncdu="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias pass="gopass"
 
 # Add fzf for shell history search
+setopt hist_ignore_all_dups
 source /usr/share/fzf/shell/key-bindings.zsh
 
 # load gopass completion
