@@ -1,7 +1,4 @@
 # Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
@@ -42,8 +39,8 @@ output * bg /home/embik/Bilder/Wallpapers/WFPw2.jpg fill
 #
 exec swayidle -w \
     timeout 300 '~/.local/bin/generate-lockscreen && swaylock -f -i /home/embik/.local/share/lock/lockscreen.png' \
-    timeout 600 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
+#    timeout 600 'swaymsg "output * dpms off"' \
+#    resume 'swaymsg "output * dpms on"' \
     before-sleep '~/.local/bin/generate-lockscreen && swaylock -f -i /home/embik/.local/share/lock/lockscreen.png'
 
 # lockscreen
@@ -53,16 +50,13 @@ bindsym $mod+l exec "sleep 1; pkill -USR1 swayidle"
 default_border pixel 2
 default_floating_border pixel 2
 
-gaps outer 8
-gaps inner 2
-
-# Be smart about borders and gaps
-smart_borders on
-smart_gaps on
+gaps outer 32
+gaps inner 4
 
 # Float some windows by default
 for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="gnome-calculator"] floating enable
 
 ### Input configuration
 #
