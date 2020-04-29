@@ -23,7 +23,7 @@ set $password ~/.local/bin/gopass ls -f | rofi -dmenu | xargs -i ~/.local/bin/go
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg /home/embik/Bilder/Wallpapers/WFPw2.jpg fill
+output * bg /home/embik/Bilder/Wallpapers/firewatch6.jpg fill
 #
 # Example configuration:
 #
@@ -50,7 +50,7 @@ bindsym $mod+l exec "sleep 1; pkill -USR1 swayidle"
 default_border pixel 2
 default_floating_border pixel 2
 
-gaps outer 32
+gaps outer 16
 gaps inner 4
 
 # Float some windows by default
