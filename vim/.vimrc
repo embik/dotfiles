@@ -45,6 +45,7 @@ endfunction
 " Import plugins via vim-plug
 call plug#begin()
 Plug 'morhetz/gruvbox'
+Plug 'dylanaraps/wal.vim'
 
 " Interface plugins
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -66,7 +67,7 @@ Plug 'Chiel92/vim-autoformat'
 cal plug#end()
 
 set termguicolors
-colorscheme gruvbox
+colorscheme wal
 set background=dark
 
 hi clear SignColumn
@@ -81,7 +82,15 @@ hi VertSplit ctermbg=235 ctermfg=235
 
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
-"let g:ycm_rust_src_path = '/usr/lib64/rustlib/src/rust/src'
+let g:ycm_language_server =
+\ [
+\   {
+\     'name': 'rust',
+\     'cmdline': ['rust-analyzer'],
+\     'filetypes': ['rust'],
+\     'project_root_files': ['Cargo.toml']
+\   }
+\ ]
 
 set noshowmode
 
@@ -163,6 +172,7 @@ let g:tagbar_type_haskell = {
         \ 'type'    : 't'
     \}
 \}
+
 
 " Map the .pl file extension to Prolog (I don't Perl anyway)
 let g:filetype_pl="prolog"
