@@ -15,15 +15,15 @@ set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 #set $menu dmenu_path | dmenu | xargs swaymsg exec
-set $menu rofi -show drun | xargs swaymsg exec
+set $menu wofi
 
-# Run pass and rofi to quickly access passwords
-set $password ~/.local/bin/gopass ls -f | rofi -dmenu | xargs -i ~/.local/bin/gopass -c {}
+# Run gopass and wofi to quickly access passwords
+set $password ~/.local/bin/gopass ls -f | wofi --show dmenu | xargs -i ~/.local/bin/gopass {} | head -n1 | wl-copy --paste-once
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg /home/embik/Bilder/Wallpapers/firewatch6.jpg fill
+output * bg /home/embik/Bilder/Wallpapers/low_poly_landscape.jpg fill
 #
 # Example configuration:
 #
@@ -257,7 +257,11 @@ seat "*" {
     hide_cursor 10000
 }
 
-exec mako --anchor bottom-right > /tmp/mako.log 2>&1
+# start notification daemon
+exec mako > /tmp/mako.log 2>&1
+
+# restore color scheme
+exec wal -R -e -n
 
 #
 # Color Configuration:
