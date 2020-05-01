@@ -1,0 +1,11 @@
+anchor=bottom-left
+
+font=OverpassMono 11
+width=400
+max-icon-size=32
+border-size=4
+border-color=#D6C38Ef0
+background-color=#e9dbbff0
+text-color=#222222
+padding=12
+border-radius=3
