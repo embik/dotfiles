@@ -260,6 +260,9 @@ seat "*" {
 # start notification daemon
 exec mako > /tmp/mako.log 2>&1
 
+# start libinput-gestures
+exec libinput-gestures > /tmp/libinput-gestures.log 2>&1
+
 # restore color scheme
 exec wal -R -e -n
 
