@@ -44,8 +44,6 @@ endfunction
 
 " Import plugins via vim-plug
 call plug#begin()
-Plug 'morhetz/gruvbox'
-Plug 'dylanaraps/wal.vim'
 
 " Interface plugins
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -66,8 +64,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'Chiel92/vim-autoformat'
 cal plug#end()
 
-set termguicolors
-colorscheme wal
 set background=dark
 
 hi clear SignColumn
