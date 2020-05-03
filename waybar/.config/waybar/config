@@ -19,11 +19,7 @@
         }
     },
 	"pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-icons": {
-            "speaker": "",
-            "headphone": ""
-        },
+        "format": "{volume}%",
 		"on-click": "pavucontrol"
 	},
 	"network": {
