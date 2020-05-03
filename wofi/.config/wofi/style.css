@@ -9,8 +9,12 @@ window {
 #input {
     border: 2px solid #111111;
     background-color: #222222;
-    font-size: 18px;
+    font-size: 14px;
     color: white;
+}
+
+#input:selected {
+    background: #ffffff;
 }
 
 #outer-box {
@@ -19,7 +23,7 @@ window {
 
 #scroll {
     margin: 5px 0px;
-    font-size: 16px;
+    font-size: 14px;
     color: #ccc;
 }
 
@@ -28,5 +32,5 @@ window {
 }
 
 #entry:selected {
-    background-color: #ADB788;
+    background-color: #e7a186;
 }
