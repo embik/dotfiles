@@ -24,6 +24,15 @@ set $password ~/.local/bin/gopass ls -f | wofi --show dmenu | xargs -i ~/.local/
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
 output * bg /home/embik/Bilder/Wallpapers/low_poly_landscape.jpg fill
+
+set $laptop eDP-1
+
+output $laptop res 1920x1080 pos 0 0
+output DP-3 res 2560x1440 pos 1920 0
+
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
 #
 # Example configuration:
 #
