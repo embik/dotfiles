@@ -1,0 +1,6 @@
+eval "$(starship init zsh)"
+
+source ~/.local/share/zsh/quitcd.bash_zsh
+
+export EDITOR=nvim
+alias vi=nvim

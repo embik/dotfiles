@@ -1,0 +1,23 @@
+[line_break]
+disabled = true
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = true
+show_always = true
+
+[hostname]
+ssh_only = false
+format =  "[$hostname](bold red) "
+trim_at = ".local"
+disabled = false
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+[cmd_duration]
+min_time = 60_0000
