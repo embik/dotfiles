@@ -1,6 +1,14 @@
+# read starship prompt config
 eval "$(starship init zsh)"
 
+# create 'n' shortcut to open nnn and browse files
 source ~/.local/share/zsh/quitcd.bash_zsh
 
+# load fzf
+# TODO: does this need the version in there? it will break on upgrade
+source /opt/homebrew/Cellar/fzf/0.27.2/shell/key-bindings.zsh
+source /opt/homebrew/Cellar/fzf/0.27.2/shell/completion.zsh
+
+# editor configuration
 export EDITOR=nvim
 alias vi=nvim
