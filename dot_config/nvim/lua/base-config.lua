@@ -11,6 +11,10 @@ vim.wo.number = true
 --Do not save when switching buffers
 vim.o.hidden = true
 
+vim.o.splitbelow = true
+vim.o.splitright = true
+vim.wo.cul = true
+
 --Enable mouse mode
 vim.o.mouse = "a"
 
