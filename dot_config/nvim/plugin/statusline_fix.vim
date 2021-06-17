@@ -1,4 +1,4 @@
-# source: https://github.com/glepnir/galaxyline.nvim/issues/178#issuecomment-852673291
+" source: https://github.com/glepnir/galaxyline.nvim/issues/178#issuecomment-852673291
 au BufEnter,BufWinEnter,WinEnter,CmdwinEnter *
                        \ call s:disable_statusline('NvimTree')
 fun! s:disable_statusline(bn)
