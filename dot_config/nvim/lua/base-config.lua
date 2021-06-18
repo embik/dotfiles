@@ -73,3 +73,6 @@ vim.o.clipboard = "unnamedplus"
 -- Pretty tabs
 vim.bo.expandtab = true
 vim.bo.shiftwidth = 2
+
+-- enable autosave
+vim.g.auto_save = true

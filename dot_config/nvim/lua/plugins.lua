@@ -3,6 +3,7 @@ local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'       	-- Package manager
   use 'ayu-theme/ayu-vim'		-- color scheme (Ayu)
+  use 'lewis6991/gitsigns.nvim'         -- git signs
   
   -- Language stuff
   use 'neovim/nvim-lspconfig'        	-- Collection of configurations for built-in LSP client
@@ -22,5 +23,6 @@ require('packer').startup(function()
 
   -- UI/UX plugins
   use 'folke/which-key.nvim'
+  use '907th/vim-auto-save'
   use {'lukas-reineke/indent-blankline.nvim', branch = "lua"}
 end)
