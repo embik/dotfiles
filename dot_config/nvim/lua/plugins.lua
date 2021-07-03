@@ -3,6 +3,9 @@ local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'       	-- Package manager
   use 'ayu-theme/ayu-vim'		-- color scheme (Ayu)
+  
+  -- Git plugins
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
   use 'lewis6991/gitsigns.nvim'         -- git signs
   
   -- Language stuff
@@ -22,7 +25,7 @@ require('packer').startup(function()
   use "ryanoasis/vim-devicons"
 
   -- UI/UX plugins
-  use 'folke/which-key.nvim'
-  use '907th/vim-auto-save'
-  use {'lukas-reineke/indent-blankline.nvim', branch = "lua"}
+  use 'folke/which-key.nvim'            -- helps with the keyboard shortcuts
+  use '907th/vim-auto-save'             -- save files automatically to disk
+  use 'lukas-reineke/indent-blankline.nvim'
 end)

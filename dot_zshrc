@@ -12,3 +12,6 @@ source /opt/homebrew/Cellar/fzf/0.27.2/shell/completion.zsh
 # editor configuration
 export EDITOR=nvim
 alias vi=nvim
+
+# set python to python3
+alias python=python3
