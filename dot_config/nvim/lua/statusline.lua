@@ -20,10 +20,10 @@ local colors = {
 gls.left[2] = {
     statusIcon = {
         provider = function()
-            return "   "
+            return "    "
         end,
         highlight = {colors.bg, colors.blue},
-        separator = "  ",
+        separator = '  ',
         separator_highlight = {colors.blue, colors.lightbg}
     }
 }
@@ -99,7 +99,7 @@ gls.right[1] = {
             msg = msg or "No Active Lsp"
             local clients = vim.lsp.get_active_clients()
             if next(clients) ~= nil then
-                return " " .. "active "
+                return "lsp active "
             else
                 return ""
             end
@@ -114,9 +114,7 @@ gls.right[2] = {
             return "   "
         end,
         condition = require("galaxyline.provider_vcs").check_git_workspace,
-        highlight = {colors.grey, colors.lightbg},
-        separator = "",
-        separator_highlight = {colors.lightbg, colors.bg}
+        highlight = {colors.lightbg, colors.yellow}
     }
 }
 
@@ -124,7 +122,7 @@ gls.right[3] = {
     GitBranch = {
         provider = "GitBranch",
         condition = require("galaxyline.provider_vcs").check_git_workspace,
-        highlight = {colors.grey, colors.lightbg}
+        highlight = {colors.lightbg, colors.yellow},
     }
 }
 
@@ -133,9 +131,9 @@ gls.right[4] = {
         provider = function()
             return "  "
         end,
-        highlight = {colors.bg, colors.red},
+        highlight = {colors.lightbg, colors.red},
         separator = "  ",
-        separator_highlight = {colors.red, colors.lightbg}
+        separator_highlight = {colors.lightbg, colors.yellow},
     }
 }
 
@@ -159,16 +157,16 @@ gls.right[5] = {
                 return "  " .. current_Mode .. " "
             end
         end,
-        highlight = {colors.red, colors.lightbg}
+        highlight = {colors.lightbg, colors.red}
     }
 }
 
 gls.right[6] = {
     some_icon = {
         provider = function()
-            return "  "
+            return "   "
         end,
-        separator = "  ",
+        separator = "",
         separator_highlight = {colors.green, colors.lightbg},
         highlight = {colors.lightbg, colors.green}
     }
@@ -188,6 +186,6 @@ gls.right[7] = {
             local result, _ = math.modf((current_line / total_line) * 100)
             return "  " .. result .. "% "
         end,
-        highlight = {colors.green, colors.lightbg}
+        highlight = {colors.lightbg, colors.green}
     }
 }
