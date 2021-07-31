@@ -27,5 +27,10 @@ for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
 
+-- configure elixir-ls (needs location)
+nvim_lsp['elixirls'].setup {
+  cmd = { '/opt/elixir-ls/language_server.sh' };
+}
+
 -- Map :Format to vim.lsp.buf.formatting()
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
