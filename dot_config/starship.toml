@@ -11,7 +11,7 @@ show_always = true
 [hostname]
 ssh_only = false
 format =  "[$hostname](bold red) "
-trim_at = ".local"
+trim_at = ".fritz.box"
 disabled = false
 
 # Replace the "❯" symbol in the prompt with "➜"

@@ -1,1 +1,4 @@
 *.swp
+.keep
+
+./dot_config/nvim/plugin/packer_compiled.lua

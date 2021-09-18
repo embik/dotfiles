@@ -11,6 +11,7 @@ require('git-signs')            -- gitsigns.nvim config
 require('lsp')                  -- Configure language server integration
 require('completion')           -- Autocompletion through compe
 require('treesitter')           -- tree-sitter for better syntax highlighting
+require('debug-adapters')       -- debug adapters via nvim-dap
 require('statusline')           -- galaxyline configuration (bottom statusline)
 require('whichkey')             -- Set up which-key for key hints
 require('tree')                 -- Configure nvim-tree (file browser)

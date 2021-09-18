@@ -9,7 +9,8 @@ require("nvim-treesitter.configs").setup {
         "rust",
         "go",
         "yaml",
-	"toml"
+	"toml",
+        "hcl"
     },
     highlight = {
         enable = true,

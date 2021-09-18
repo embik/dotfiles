@@ -11,8 +11,10 @@ require('packer').startup(function()
   -- Language stuff
   use 'neovim/nvim-lspconfig'        	-- Collection of configurations for built-in LSP client
   use 'hrsh7th/nvim-compe'           	-- Autocompletion plugin
+  use 'L3MON4D3/LuaSnip'                -- snippet support 
   use 'nvim-treesitter/nvim-treesitter' -- better synxtax highlighting thorugh tree-sitter
-  use 'sebdah/vim-delve'                -- delve (go debugger) integration
+  use 'mfussenegger/nvim-dap'           -- DAP (debug adapter protocol) support
+  use 'rcarriga/nvim-dap-ui'            -- UI plugin for nvim-dap
 
   -- UI to select things (files, grep results, open buffers...)
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }

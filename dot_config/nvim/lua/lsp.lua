@@ -21,15 +21,29 @@ local on_attach = function(_client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    "documentation",
+    "detail",
+    "additionalTextEdits"
+  }
+}
+
 -- Enable the following language servers
-local servers = { 'rust_analyzer', 'gopls' }
+local servers = { 'rust_analyzer', 'gopls', 'terraformls' }
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup { on_attach = on_attach }
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
 end
 
 -- configure elixir-ls (needs location)
 nvim_lsp['elixirls'].setup {
-  cmd = { '/opt/elixir-ls/language_server.sh' };
+  cmd = { '/opt/elixir-ls/language_server.sh' },
+  capabilities = capabilities,
 }
 
 -- Map :Format to vim.lsp.buf.formatting()
