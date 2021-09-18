@@ -15,3 +15,6 @@ alias vi=nvim
 
 # set python to python3
 alias python=python3
+
+# add escripts to PATH
+export PATH=$PATH:$HOME/.mix/escripts
