@@ -18,3 +18,5 @@ alias python=python3
 
 # add escripts to PATH
 export PATH=$PATH:$HOME/.mix/escripts
+# use homebrew-provided curl
+export PATH=/opt/homebrew/opt/curl/bin:$PATH
