@@ -71,8 +71,9 @@ vim.wo.signcolumn="yes"
 vim.o.clipboard = "unnamedplus"
 
 -- Pretty tabs
-vim.bo.expandtab = true
-vim.bo.shiftwidth = 2
+vim.o.expandtab = true
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
 
 -- enable autosave
 vim.g.auto_save = true
