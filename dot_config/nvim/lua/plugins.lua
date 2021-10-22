@@ -18,6 +18,17 @@ require('packer').startup(function()
 
   -- UI to select things (files, grep results, open buffers...)
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
+  use {
+    'folke/trouble.nvim',
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+        require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        }
+    end
+  }
   
   -- Status lines (bottom galaxy line plus top buffer line)
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
