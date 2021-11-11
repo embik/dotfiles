@@ -40,6 +40,15 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+nvim_lsp['gopls'].setup {
+    on_attach = on_attach,
+    settings = {
+        gopls = {
+            env = {GOFLAGS="-tags=integration"}
+        }
+    }
+}
+
 -- configure elixir-ls (needs location)
 nvim_lsp['elixirls'].setup {
   cmd = { '/opt/elixir-ls/language_server.sh' },
