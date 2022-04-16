@@ -21,15 +21,7 @@ local on_attach = function(_client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = {
-    "documentation",
-    "detail",
-    "additionalTextEdits"
-  }
-}
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Enable the following language servers with their default settings
 local servers = { 'rust_analyzer', 'terraformls' }
@@ -49,6 +41,7 @@ nvim_lsp['elixirls'].setup {
 -- configure gopls (needs custom GOFLAGS)
 nvim_lsp['gopls'].setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     settings = {
         gopls = {
             env = {GOFLAGS="-tags=integration"}
