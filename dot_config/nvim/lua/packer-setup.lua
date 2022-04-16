@@ -9,6 +9,6 @@ end
 vim.api.nvim_exec([[
   augroup Packer
     autocmd!
-    autocmd BufWritePost init.lua PackerCompile
+    autocmd BufWritePost plugins.lua PackerCompile
   augroup end
 ]], false)

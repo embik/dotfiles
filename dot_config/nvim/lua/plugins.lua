@@ -1,6 +1,7 @@
 local use = require('packer').use
+local util = require('packer.util')
 
-require('packer').startup(function()
+require('packer').startup({function()
   use 'wbthomason/packer.nvim'       	-- Package manager
   use 'ayu-theme/ayu-vim'		-- color scheme (Ayu)
   
@@ -31,4 +32,9 @@ require('packer').startup(function()
   use {'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons'} -- adds UI to review LSP findings
   use '907th/vim-auto-save'                                             -- save files automatically to disk
   use 'lukas-reineke/indent-blankline.nvim'                             -- indents blank lines
-end)
+end, config = {
+    -- use a snapshot
+    snapshot = '2022-04-16',
+    snapshot_path = util.join_paths(vim.fn.stdpath('config'), 'snapshots'),
+    compile_path = util.join_paths(vim.fn.stdpath('cache'), 'plugin', 'packer_compiled.lua')
+}})
