@@ -3,7 +3,7 @@ local util = require('packer.util')
 
 require('packer').startup({function()
     use 'wbthomason/packer.nvim'       	-- Package manager
-    use 'ayu-theme/ayu-vim'		-- color scheme (Ayu)
+    use 'Shatur/neovim-ayu'		        -- color scheme (Ayu)
   
     -- Git plugins
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }

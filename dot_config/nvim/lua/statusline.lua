@@ -1,7 +1,7 @@
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'ayu_dark',
+    theme = 'auto',
     globalstatus = true,
   }
 }
