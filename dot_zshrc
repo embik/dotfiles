@@ -5,6 +5,7 @@ eval "$(starship init zsh)"
 source ~/.local/share/zsh/quitcd.bash_zsh
 
 # load fzf
+export FZF_DEFAULT_OPTS='--border'
 source /opt/homebrew/Cellar/fzf/*/shell/key-bindings.zsh
 source /opt/homebrew/Cellar/fzf/*/shell/completion.zsh
 
