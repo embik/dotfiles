@@ -12,6 +12,14 @@ The following tools are customized in my dotfiles:
 - Editor/IDE: [neovim](https://neovim.io) (_config requires neovim 0.7+_)
 - Command line prompt: [starship](https://starship.rs)
 
+## Configuration
+
+Configure templates in this `chezmoi` repository via `~/.config/chezmoi/chezmoi.toml`. The following variables are expected:
+
+| ----------------- | ----------------------------------- |
+| `git_email`       | email address for git configuration |
+| `git_signing_key` | GPG key ID for signing git commits  |
+
 ## Sources
 
 - Neovim config has been adapted from [siduck76/NvChad](https://github.com/siduck76/NvChad), licensed under GPLv3. Changes have been applied starting from 2021-06-11.

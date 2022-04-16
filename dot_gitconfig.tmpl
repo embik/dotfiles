@@ -1,0 +1,19 @@
+[init]
+    defaultBranch = main
+
+[user]
+    name = Marvin Beckers
+    email = {{ .git_email }}
+    signingkey = {{ .git_signing_key }}
+
+# set up difftastic as alternative diffing tool
+[diff]
+    tool = difftastic
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
+[alias]
+    dft = difftool
