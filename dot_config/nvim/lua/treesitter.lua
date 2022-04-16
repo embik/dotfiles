@@ -9,11 +9,15 @@ require("nvim-treesitter.configs").setup {
         "rust",
         "go",
         "yaml",
-	"toml",
-        "hcl"
+        "toml",
+        "hcl",
+        "gleam",
     },
     highlight = {
         enable = true,
         use_languagetree = true
     }
 }
+
+-- help neovim understand *.gleam files are gleam files (???)
+vim.cmd("au BufRead,BufNewFile *.gleam set filetype=gleam")
