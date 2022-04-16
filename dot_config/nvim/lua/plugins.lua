@@ -21,6 +21,7 @@ require('packer').startup(function()
   
   -- Status line
   use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+  use {'kdheepak/tabline.nvim'}
 
   -- File explorer
   use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
