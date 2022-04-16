@@ -9,7 +9,7 @@ My dotfiles are managed and applied via [chezmoi](https://www.chezmoi.io).
 The following tools are customized in my dotfiles:
 
 - Shell: [zsh](https://www.zsh.org)
-- Editor/IDE: [neovim](https://neovim.io) (_config requires neovim 0.5_)
+- Editor/IDE: [neovim](https://neovim.io) (_config requires neovim 0.7+_)
 - Command line prompt: [starship](https://starship.rs)
 
 ## Sources
