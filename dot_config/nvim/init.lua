@@ -1,6 +1,10 @@
 -- leader key
 vim.g.mapleader = ","
 
+-- enable new global status line
+-- requires neovim 0.7
+vim.go.laststatus = 3
+
 -- Base setup (packer, plugins, base nvim config)
 require('packer-setup')         -- Ensure packer is installed
 require('plugins')              -- Import plugins
@@ -16,3 +20,4 @@ require('statusline')           -- galaxyline configuration (bottom statusline)
 require('whichkey')             -- Set up which-key for key hints
 require('tree')                 -- Configure nvim-tree (file browser)
 require('nvim-telescope')       -- nvim-telescope configuration
+require('trouble-ui')           -- Set up :Trouble to show LSP findings

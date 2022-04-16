@@ -31,7 +31,7 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   }
 }
 
--- Enable the following language servers
+-- Enable the following language servers with their default settings
 local servers = { 'rust_analyzer', 'terraformls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
@@ -40,6 +40,13 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- configure elixir-ls (needs location)
+nvim_lsp['elixirls'].setup {
+    cmd = { '/opt/elixir-ls/language_server.sh' },
+    capabilities = capabilities,
+}
+
+-- configure gopls (needs custom GOFLAGS)
 nvim_lsp['gopls'].setup {
     on_attach = on_attach,
     settings = {
@@ -49,13 +56,7 @@ nvim_lsp['gopls'].setup {
     }
 }
 
--- configure elixir-ls (needs location)
-nvim_lsp['elixirls'].setup {
-  cmd = { '/opt/elixir-ls/language_server.sh' },
-  capabilities = capabilities,
-}
-
 -- Map :Format to vim.lsp.buf.formatting()
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
--- Automatically format Go files on write
+--- Automatically format Go files on write
 vim.cmd([[ autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000) ]])

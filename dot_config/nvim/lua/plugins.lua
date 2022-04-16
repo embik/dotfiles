@@ -17,28 +17,18 @@ require('packer').startup(function()
   use 'rcarriga/nvim-dap-ui'            -- UI plugin for nvim-dap
 
   -- UI to select things (files, grep results, open buffers...)
-  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
-  use {
-    'folke/trouble.nvim',
-    requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-        require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-        }
-    end
-  }
+  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
   
-  -- Status lines (bottom galaxy line plus top buffer line)
-  use {'glepnir/galaxyline.nvim', branch = 'main', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
-  
+  -- Status line
+  use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+
   -- File explorer
   use "kyazdani42/nvim-tree.lua"
   use "ryanoasis/vim-devicons"
 
   -- UI/UX plugins
-  use 'folke/which-key.nvim'            -- helps with the keyboard shortcuts
-  use '907th/vim-auto-save'             -- save files automatically to disk
-  use 'lukas-reineke/indent-blankline.nvim'
+  use 'folke/which-key.nvim'                                            -- helps with the keyboard shortcuts
+  use {'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons'} -- adds UI to review LSP findings
+  use '907th/vim-auto-save'                                             -- save files automatically to disk
+  use 'lukas-reineke/indent-blankline.nvim'                             -- indents blank lines
 end)
