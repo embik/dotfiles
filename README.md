@@ -16,6 +16,7 @@ The following tools are customized in my dotfiles:
 
 Configure templates in this `chezmoi` repository via `~/.config/chezmoi/chezmoi.toml`. The following variables are expected:
 
+| Key               | Description                         |
 | ----------------- | ----------------------------------- |
 | `git_email`       | email address for git configuration |
 | `git_signing_key` | GPG key ID for signing git commits  |
