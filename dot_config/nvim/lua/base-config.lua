@@ -34,8 +34,7 @@ vim.wo.signcolumn="yes"
 
 --Set colorscheme (order is important here)
 vim.o.termguicolors = true
-vim.g.ayucolor = "dark"
-vim.cmd[[colorscheme ayu]]
+vim.cmd("colorscheme ayu")
 
 --Incremental live completion
 vim.o.inccommand = "nosplit"
