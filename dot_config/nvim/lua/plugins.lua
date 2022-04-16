@@ -23,8 +23,7 @@ require('packer').startup(function()
   use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
 
   -- File explorer
-  use "kyazdani42/nvim-tree.lua"
-  use "ryanoasis/vim-devicons"
+  use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
   -- UI/UX plugins
   use 'folke/which-key.nvim'                                            -- helps with the keyboard shortcuts
