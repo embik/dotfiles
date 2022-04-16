@@ -5,9 +5,8 @@ eval "$(starship init zsh)"
 source ~/.local/share/zsh/quitcd.bash_zsh
 
 # load fzf
-# TODO: does this need the version in there? it will break on upgrade
-source /opt/homebrew/Cellar/fzf/0.27.2/shell/key-bindings.zsh
-source /opt/homebrew/Cellar/fzf/0.27.2/shell/completion.zsh
+source /opt/homebrew/Cellar/fzf/*/shell/key-bindings.zsh
+source /opt/homebrew/Cellar/fzf/*/shell/completion.zsh
 
 # editor configuration
 export EDITOR=nvim
