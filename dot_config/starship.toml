@@ -21,3 +21,10 @@ error_symbol = "[✗](bold red) "
 
 [cmd_duration]
 min_time = 60_0000
+
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)](dimmed green) '
+disabled = false
+
+[gcloud]
+disabled = true

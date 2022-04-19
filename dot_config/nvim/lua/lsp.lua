@@ -50,7 +50,7 @@ nvim_lsp['gopls'].setup {
     capabilities = capabilities,
     settings = {
         gopls = {
-            env = {GOFLAGS="-tags=integration"}
+            env = {GOFLAGS="-tags=integration,e2e,create"}
         }
     },
 }
@@ -60,3 +60,6 @@ vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 --- Automatically format Go files on write
 vim.cmd([[ autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000) ]])
 
+--- Recognise elixir as elixir
+vim.cmd([[ autocmd BufRead,BufNewFile *.ex,*.exs set filetype=elixir ]])
+vim.cmd([[ autocmd BufRead,BufNewFile *.eex set filetype=eelixir ]])
