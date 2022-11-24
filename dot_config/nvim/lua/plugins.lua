@@ -18,6 +18,7 @@ require('packer').startup({function()
 
     -- Autocompletion & snippets
     use {'L3MON4D3/LuaSnip', requires = 'saadparwaiz1/cmp_luasnip' } -- snippet support 
+    use 'rafamadriz/friendly-snippets' --- provide some nice snippets
     use {'hrsh7th/nvim-cmp', requires = {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-buffer',
