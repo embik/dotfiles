@@ -59,7 +59,7 @@ nvim_lsp['gopls'].setup {
 -- Map :Format to vim.lsp.buf.formatting()
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 --- Automatically format Go files on write
-vim.cmd([[ autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000) ]])
+vim.cmd([[ autocmd BufWritePre *.go lua vim.lsp.buf.format({async = false }) ]])
 
 --- Recognise elixir as elixir
 vim.cmd([[ autocmd BufRead,BufNewFile *.ex,*.exs set filetype=elixir ]])
