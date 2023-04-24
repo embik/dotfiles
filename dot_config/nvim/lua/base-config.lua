@@ -76,3 +76,7 @@ vim.o.tabstop = 4
 
 -- enable autosave
 vim.g.auto_save = true
+
+-- keyboard shortcuts for quickly switching between buffers
+vim.api.nvim_set_keymap("n", "<C-j>", ":bprev<CR>", {noremap = true,silent = true})
+vim.api.nvim_set_keymap("n", "<C-k>", ":bnext<CR>", {noremap = true,silent = true})

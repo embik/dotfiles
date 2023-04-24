@@ -18,7 +18,7 @@ require('packer').startup({function()
 
     -- Autocompletion & snippets
     use {'L3MON4D3/LuaSnip', requires = 'saadparwaiz1/cmp_luasnip' } -- snippet support 
-    use 'rafamadriz/friendly-snippets' --- provide some nice snippets
+    use 'rafamadriz/friendly-snippets' -- provide some nice snippets
     use {'hrsh7th/nvim-cmp', requires = {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-buffer',
@@ -31,11 +31,11 @@ require('packer').startup({function()
     use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
   
     -- Status & tab line
-    use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+    use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
     use {'kdheepak/tabline.nvim'}
 
     -- File explorer
-    use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
+    use {'nvim-tree/nvim-tree.lua', requires = 'nvim-tree/nvim-web-devicons'}
 
     -- UI/UX plugins
     use 'folke/which-key.nvim'                                            -- helps with the keyboard shortcuts

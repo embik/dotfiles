@@ -19,8 +19,10 @@ alias python=python3
 # add various bin locations to PATH
 export PATH=$PATH:$HOME/.mix/escripts:$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin
 
-# use homebrew-provided curl
+# use homebrew-provided curl and GNU utils
 export PATH=/opt/homebrew/opt/curl/bin:$PATH
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
 # add krew binaries to PATH
 export PATH=$PATH:$HOME/.krew/bin
