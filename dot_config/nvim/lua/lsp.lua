@@ -50,7 +50,7 @@ nvim_lsp['gopls'].setup {
     capabilities = capabilities,
     settings = {
         gopls = {
-            env = {GOFLAGS="-tags=integration,e2e,create,ee,ee3,dualstack"},
+            env = {GOFLAGS="-tags=integration,e2e,create,ee,ee3,dualstack,mla"},
             linksInHover = false,
         }
     },

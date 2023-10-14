@@ -6,8 +6,14 @@ require('packer').startup({function()
     use 'Shatur/neovim-ayu'		        -- color scheme (Ayu)
   
     -- Git plugins
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-    use 'lewis6991/gitsigns.nvim'         -- git signs
+    use { 'NeogitOrg/neogit', requires = {
+    "nvim-lua/plenary.nvim",                -- required
+    "nvim-telescope/telescope.nvim",        -- optional
+    "sindrets/diffview.nvim",               -- optional
+    "ibhagwan/fzf-lua",                     -- optional
+    }}
+    use 'lewis6991/gitsigns.nvim'           -- git signs
+    use 'f-person/git-blame.nvim'           -- git blame
   
     -- LSP integration, debugging, syntax highlighting
     use 'neovim/nvim-lspconfig'        	                                    -- Collection of configurations for built-in LSP client

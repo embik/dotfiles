@@ -12,6 +12,7 @@ require('base-config')          -- Set up better basic neovim experience
 
 -- Plugin configurations
 require('git-signs')            -- gitsigns.nvim config
+require('git')                  -- neogit config
 require('lsp')                  -- Configure language server integration
 require('completion')           -- Autocompletion through compe
 require('treesitter')           -- tree-sitter for better syntax highlighting
