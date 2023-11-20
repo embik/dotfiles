@@ -8,6 +8,9 @@ format = "[$user]($style) "
 disabled = true
 show_always = true
 
+[package]
+disabled = true
+
 [hostname]
 ssh_only = false
 format =  "[$hostname](bold red) "
