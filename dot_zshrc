@@ -35,6 +35,13 @@ export SAVHIST=$HISTSIZE
 # load git automcompletion
 autoload -Uz compinit && compinit
 
+# load kubeconfig-bikeshed shell completion & magic
+if command -v kbs &>/dev/null
+then
+    source <(kbs shell completion zsh)
+    source <(kbs shell magic zsh)
+fi
+
 # load snippets from a .zshrcd directory
 for file in ~/.zshrcd/*; do 
     source "$file"
