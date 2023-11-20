@@ -13,6 +13,8 @@ source /opt/homebrew/Cellar/fzf/*/shell/completion.zsh
 export EDITOR=nvim
 alias vi=nvim
 
+alias cgit="chezmoi git -- "
+
 # set python to python3
 alias python=python3
 
