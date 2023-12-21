@@ -43,13 +43,13 @@ require('packer').startup({function()
     -- File explorer
     use {'nvim-tree/nvim-tree.lua', requires = 'nvim-tree/nvim-web-devicons'}
 
+    use {'kaarmu/typst.vim'}
+
     -- UI/UX plugins
     use 'folke/which-key.nvim'                                            -- helps with the keyboard shortcuts
     use '907th/vim-auto-save'                                             -- save files automatically to disk
     use 'lukas-reineke/indent-blankline.nvim'                             -- indents blank lines
 end, config = {
-    -- use a snapshot
-    -- snapshot = '2022-04-16',
     snapshot_path = util.join_paths(vim.fn.stdpath('config'), 'snapshots'),
     compile_path = util.join_paths(vim.fn.stdpath('cache'), 'plugin', 'packer_compiled.lua')
 }})
