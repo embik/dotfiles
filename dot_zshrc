@@ -37,6 +37,8 @@ export SAVHIST=$HISTSIZE
 # load git automcompletion
 autoload -Uz compinit && compinit
 
+alias k=kubectl
+
 # load kubeconfig-bikeshed shell completion & magic
 if command -v kbs &>/dev/null
 then
