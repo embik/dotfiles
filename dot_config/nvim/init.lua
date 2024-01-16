@@ -22,3 +22,4 @@ require('whichkey')             -- Set up which-key for key hints
 require('tree')                 -- Configure nvim-tree (file browser)
 require('nvim-telescope')       -- nvim-telescope configuration
 require('trouble-ui')           -- Set up :Trouble to show LSP findings
+require('indent-blankline')     -- Configure indent-blankline
