@@ -40,7 +40,8 @@ end
 
 -- configure elixir-ls (needs location)
 nvim_lsp['elixirls'].setup {
-    cmd = { '/opt/elixir-ls/language_server.sh' },
+    cmd = { 'elixir-ls' },
+    on_attach = on_attach,
     capabilities = capabilities,
 }
 
