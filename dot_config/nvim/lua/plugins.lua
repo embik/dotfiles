@@ -20,7 +20,7 @@ require('packer').startup({function()
     use {'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons'}   -- Adds UI to review LSP findings
     use 'nvim-treesitter/nvim-treesitter'                                   -- Better synxtax highlighting through tree-sitter
     use 'mfussenegger/nvim-dap'                                             -- DAP (debug adapter protocol) support
-    use 'rcarriga/nvim-dap-ui'                                              -- UI plugin for nvim-dap
+    use {'rcarriga/nvim-dap-ui', requires = 'nvim-neotest/nvim-nio' }       -- UI plugin for nvim-dap
 
     -- Autocompletion & snippets
     use {'L3MON4D3/LuaSnip', requires = 'saadparwaiz1/cmp_luasnip' } -- snippet support 
