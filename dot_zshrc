@@ -13,7 +13,10 @@ source /opt/homebrew/Cellar/fzf/*/shell/completion.zsh
 export EDITOR=nvim
 alias vi=nvim
 
+# handy aliases
 alias cgit="chezmoi git -- "
+alias load-env='[ ! -f .env ] || export $(grep -v '^#' .env | xargs)'
+alias decode-jwt="jq -R 'split(\".\") | .[0],.[1] | @base64d | fromjson' <<< "
 
 # set python to python3
 alias python=python3
