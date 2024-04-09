@@ -31,8 +31,13 @@ export PATH=$PATH:$HOME/.krew/bin
 
 # set up better history
 setopt HIST_IGNORE_ALL_DUPS
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
 export HISTSIZE=100000
-export SAVHIST=$HISTSIZE
+export SAVEHIST=$HISTSIZE
 
 # load git automcompletion
 autoload -Uz compinit && compinit
