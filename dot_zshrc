@@ -9,6 +9,9 @@ export FZF_DEFAULT_OPTS='--border'
 source /opt/homebrew/Cellar/fzf/*/shell/key-bindings.zsh
 source /opt/homebrew/Cellar/fzf/*/shell/completion.zsh
 
+# load fubectl
+source ~/.config/zsh/fubectl.source
+
 # editor configuration
 export EDITOR=nvim
 alias vi=nvim
@@ -17,9 +20,12 @@ alias vi=nvim
 alias cgit="chezmoi git -- "
 alias load-env='[ ! -f .env ] || export $(grep -v '^#' .env | xargs)'
 alias decode-jwt="jq -R 'split(\".\") | .[0],.[1] | @base64d | fromjson' <<< "
+alias prowjobs='kubectl get pods -l created-by-prow=true -o custom-columns=NAME:.metadata.name,ORG:".metadata.labels.prow\.k8s\.io\/refs\.org",REPO:".metadata.labels.prow\.k8s\.io\/refs\.repo",PR:".metadata.labels.prow\.k8s\.io\/refs\.pull",JOB:".metadata.labels.prow\.k8s\.io\/job",TYPE:".metadata.labels.prow\.k8s\.io\/type",STATUS:".status.phase",NODE:".spec.nodeName",CREATED:".metadata.creationTimestamp" --field-selector=status.phase!=Succeeded'
 
-# set python to python3
+# set some common commands
 alias python=python3
+alias nerdctl="lima nerdctl"
+alias docker="lima nerdctl"
 
 # add various bin locations to PATH
 export PATH=$PATH:$HOME/.mix/escripts:$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin
@@ -31,6 +37,9 @@ export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
 # add krew binaries to PATH
 export PATH=$PATH:$HOME/.krew/bin
+
+# don't send semgrep metrics
+export SEMGREP_SEND_METRICS=off
 
 # set up better history
 setopt HIST_IGNORE_ALL_DUPS
