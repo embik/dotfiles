@@ -12,6 +12,7 @@ require("nvim-treesitter.configs").setup {
         "toml",
         "hcl",
         "gleam",
+        "vimdoc",
     },
     highlight = {
         enable = true,

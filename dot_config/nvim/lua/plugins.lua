@@ -14,6 +14,7 @@ require('packer').startup({function()
     }}
     use 'lewis6991/gitsigns.nvim'           -- git signs
     use 'f-person/git-blame.nvim'           -- git blame
+    use "sindrets/diffview.nvim"            -- view diffs and resolve merge conflicts
   
     -- LSP integration, debugging, syntax highlighting
     use 'neovim/nvim-lspconfig'        	                                    -- Collection of configurations for built-in LSP client
