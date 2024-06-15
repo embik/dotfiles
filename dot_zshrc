@@ -4,6 +4,9 @@ eval "$(starship init zsh)"
 # create 'n' shortcut to open nnn and browse files
 source ~/.local/share/zsh/quitcd.bash_zsh
 
+# load compinit (includes git automcompletion)
+autoload -Uz compinit && compinit
+
 # load fzf
 export FZF_DEFAULT_OPTS='--border'
 source /opt/homebrew/Cellar/fzf/*/shell/key-bindings.zsh
@@ -55,9 +58,7 @@ setopt HIST_REDUCE_BLANKS
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 
-# load git automcompletion
-autoload -Uz compinit && compinit
-
+# the ultimate YAML engineer alias
 alias k=kubectl
 
 # load kubeconfig-bikeshed shell completion & magic
