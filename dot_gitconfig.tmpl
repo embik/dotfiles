@@ -6,6 +6,9 @@
     email = {{ .git_email }}
     signingkey = {{ .git_signing_key }}
 
+[push]
+    autoSetupRemote = true
+
 # set up difftastic as alternative diffing tool
 [diff]
     tool = difftastic
