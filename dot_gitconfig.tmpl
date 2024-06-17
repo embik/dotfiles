@@ -9,14 +9,6 @@
 [push]
     autoSetupRemote = true
 
-# set up difftastic as alternative diffing tool
+# set up difftastic as diff tool
 [diff]
-    tool = difftastic
-[difftool]
-    prompt = false
-[difftool "difftastic"]
-    cmd = difft "$LOCAL" "$REMOTE"
-[pager]
-    difftool = true
-[alias]
-    dft = difftool
+    external = difft
