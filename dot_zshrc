@@ -22,6 +22,9 @@ source ~/.config/zsh/fubectl.source
 export EDITOR=nvim
 alias vi=nvim
 
+# configure bat
+export BAT_THEME="base16"
+
 # handy aliases
 alias cgit="chezmoi git -- "
 alias load-env='[ ! -f .env ] || export $(grep -v '^#' .env | xargs)'
