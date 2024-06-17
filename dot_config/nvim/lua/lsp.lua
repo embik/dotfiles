@@ -57,6 +57,9 @@ nvim_lsp['gopls'].setup {
     },
 }
 
+-- configure gleam's built-in LSP
+nvim_lsp['gleam'].setup {}
+
 -- Map :Format to vim.lsp.buf.format()
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
 --- Automatically format Go and Rust files on write
