@@ -22,6 +22,17 @@ require('packer').startup({function()
     use 'nvim-treesitter/nvim-treesitter'                                   -- Better synxtax highlighting through tree-sitter
     use 'mfussenegger/nvim-dap'                                             -- DAP (debug adapter protocol) support
     use {'rcarriga/nvim-dap-ui', requires = 'nvim-neotest/nvim-nio' }       -- UI plugin for nvim-dap
+    use {'fredrikaverpil/neotest-golang', tag = '*' }
+    use {
+      "nvim-neotest/neotest",                                               -- Integrates tests into neovim
+      tag = '*',
+      requires = {
+        "nvim-neotest/nvim-nio",
+        "nvim-lua/plenary.nvim",
+        "antoinemadec/FixCursorHold.nvim",
+        "nvim-treesitter/nvim-treesitter"
+      }
+    }
 
     -- Autocompletion & snippets
     use {'L3MON4D3/LuaSnip', requires = 'saadparwaiz1/cmp_luasnip' } -- snippet support 

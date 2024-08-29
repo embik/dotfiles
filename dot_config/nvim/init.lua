@@ -24,3 +24,4 @@ require('nvim-telescope')       -- nvim-telescope configuration
 require('trouble-ui')           -- Set up :Trouble to show LSP findings
 require('indent-blankline')     -- Configure indent-blankline
 require('diff-view')            -- Configure diffview
+require('test')                 -- Configure neotest
