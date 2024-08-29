@@ -34,7 +34,6 @@ vim.wo.signcolumn="yes"
 
 --Set colorscheme (order is important here)
 vim.o.termguicolors = true
-vim.cmd("colorscheme ayu")
 
 --Incremental live completion
 vim.o.inccommand = "nosplit"
@@ -92,3 +91,18 @@ vim.opt.listchars:append {
 	trail = space,
 	nbsp = space
 }
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt="menu,menuone,noselect"
+
+vim.cmd[[
+    set guioptions-=e " Use showtabline in gui vim
+    set sessionoptions+=tabpages,globals " store tabpages and globals in session
+]]
+
+-- Add :Format command
+vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
+--- Automatically format Go and Rust files on write
+vim.cmd([[ autocmd BufWritePre *.go lua vim.lsp.buf.format({async = false }) ]])
+vim.cmd([[ autocmd BufWritePre *.rs lua vim.lsp.buf.format({async = false }) ]])
+
