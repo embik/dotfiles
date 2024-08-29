@@ -3,8 +3,11 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         lazy = false,
-        opts = {
-            ensure_installed = {
+        config = function () 
+          local configs = require("nvim-treesitter.configs")
+
+          configs.setup({
+              ensure_installed = {
                 "html",
                 "css",
                 "lua",
@@ -18,10 +21,12 @@ return {
                 "hcl",
                 "gleam",
                 "vimdoc",
-            },
-            sync_install = false,
-            highlight = { enable = true },
-            indent = { enable = true },  
-        }
+              },
+              sync_install = false,
+              highlight = { enable = true },
+              indent = { enable = true },  
+            })
+        end
     },
 }
+
