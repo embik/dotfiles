@@ -5,8 +5,6 @@ vim.o.inccommand = "nosplit"
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
---Make line numbers default
-vim.wo.number = true
 
 --Do not save when switching buffers
 vim.o.hidden = true
@@ -46,6 +44,8 @@ vim.o.tabstop = 4
 -- enable autosave
 vim.g.auto_save = true
 
+--Make line numbers default
+vim.o.number = true
 
 -- set up visible characters for tabs and spaces
 vim.o.list = true

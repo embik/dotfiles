@@ -36,5 +36,7 @@
   "promise-async": { "branch": "main", "commit": "38a4575da9497326badd3995e768b4ccf0bb153e" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "trouble.nvim": { "branch": "main", "commit": "40c5317a6e90fe3393f07b0fee580d9e93a216b4" },
-  "which-key.nvim": { "branch": "main", "commit": "6c1584eb76b55629702716995cca4ae2798a9cca" }
+  "twilight.nvim": { "branch": "main", "commit": "8bb7fa7b918baab1ca81b977102ddb54afa63512" },
+  "which-key.nvim": { "branch": "main", "commit": "6c1584eb76b55629702716995cca4ae2798a9cca" },
+  "zen-mode.nvim": { "branch": "main", "commit": "04b52674b8c800f8b7d4609e8bd8d0212e3ffa79" }
 }

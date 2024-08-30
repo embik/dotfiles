@@ -38,4 +38,20 @@ return {
             'kevinhwang91/promise-async',
         },
     },
+    {
+        "folke/twilight.nvim",
+        lazy = true,
+        opts = {},
+    },
+    {
+        "folke/zen-mode.nvim",
+        cmd = "ZenMode",
+        opts = {
+            window = {
+                options = {
+                    number = false,
+                },
+            },
+        },
+    }
 }
