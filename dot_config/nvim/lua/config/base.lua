@@ -22,7 +22,7 @@ vim.o.mouse = "a"
 vim.o.breakindent = true
 
 --Save undo history
-vim.cmd[[set undofile]]
+vim.cmd [[set undofile]]
 
 --Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
@@ -30,40 +30,10 @@ vim.o.smartcase = true
 
 --Decrease update time
 vim.o.updatetime = 250
-vim.wo.signcolumn="yes"
+vim.wo.signcolumn = "yes"
 
 --Set colorscheme (order is important here)
 vim.o.termguicolors = true
-
---Incremental live completion
-vim.o.inccommand = "nosplit"
-
---Set highlight on search
-vim.o.hlsearch = false
-vim.o.incsearch = true
-
---Make line numbers default
-vim.wo.number = true
-
---Do not save when switching buffers
-vim.o.hidden = true
-
---Enable mouse mode
-vim.o.mouse = "a"
-
---Enable break indent
-vim.o.breakindent = true
-
---Save undo history
-vim.cmd[[set undofile]]
-
---Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
---Decrease update time
-vim.o.updatetime = 250
-vim.wo.signcolumn="yes"
 
 -- Set clipboard
 vim.o.clipboard = "unnamedplus"
@@ -77,25 +47,24 @@ vim.o.tabstop = 4
 vim.g.auto_save = true
 
 -- keyboard shortcuts for quickly switching between buffers
-vim.api.nvim_set_keymap("n", "<C-j>", ":bprev<CR>", {noremap = true,silent = true})
-vim.api.nvim_set_keymap("n", "<C-k>", ":bnext<CR>", {noremap = true,silent = true})
+vim.api.nvim_set_keymap("n", "<C-j>", ":bprev<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-k>", ":bnext<CR>", { noremap = true, silent = true })
 
 -- set up visible characters for tabs and spaces
 vim.opt.list = true
-
 local space = "·"
 vim.opt.listchars:append {
-	tab = "│─",
-	multispace = space,
-	lead = space,
-	trail = space,
-	nbsp = space
+    tab = "│─",
+    multispace = space,
+    lead = space,
+    trail = space,
+    nbsp = space
 }
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt="menu,menuone,noselect"
+vim.o.completeopt = "menu,menuone,noselect"
 
-vim.cmd[[
+vim.cmd [[
     set guioptions-=e " Use showtabline in gui vim
     set sessionoptions+=tabpages,globals " store tabpages and globals in session
 ]]
@@ -105,4 +74,3 @@ vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
 --- Automatically format Go and Rust files on write
 vim.cmd([[ autocmd BufWritePre *.go lua vim.lsp.buf.format({async = false }) ]])
 vim.cmd([[ autocmd BufWritePre *.rs lua vim.lsp.buf.format({async = false }) ]])
-
