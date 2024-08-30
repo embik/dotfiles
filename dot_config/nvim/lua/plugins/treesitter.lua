@@ -4,9 +4,7 @@ return {
         build = ":TSUpdate",
         lazy = false,
         config = function()
-            local configs = require("nvim-treesitter.configs")
-
-            configs.setup({
+            require("nvim-treesitter.configs").setup({
                 ensure_installed = {
                     "html",
                     "css",
@@ -27,5 +25,17 @@ return {
                 indent = { enable = true },
             })
         end
+    },
+    {
+        'kevinhwang91/nvim-ufo',
+        commit = "b23a46aa06f5f653d107efbc67fd2aa3877ac344",
+        opts = {
+            provider_selector = function(bufnr, filetype, buftype)
+                return { 'treesitter', 'indent' }
+            end
+        },
+        dependencies = {
+            'kevinhwang91/promise-async',
+        },
     },
 }
