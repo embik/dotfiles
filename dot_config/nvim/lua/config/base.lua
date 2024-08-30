@@ -46,12 +46,9 @@ vim.o.tabstop = 4
 -- enable autosave
 vim.g.auto_save = true
 
--- keyboard shortcuts for quickly switching between buffers
-vim.api.nvim_set_keymap("n", "<C-j>", ":bprev<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-k>", ":bnext<CR>", { noremap = true, silent = true })
 
 -- set up visible characters for tabs and spaces
-vim.opt.list = true
+vim.o.list = true
 local space = "·"
 vim.opt.listchars:append {
     tab = "│─",
@@ -63,11 +60,6 @@ vim.opt.listchars:append {
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menu,menuone,noselect"
-
-vim.cmd [[
-    set guioptions-=e " Use showtabline in gui vim
-    set sessionoptions+=tabpages,globals " store tabpages and globals in session
-]]
 
 -- Add :Format command
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
@@ -83,11 +75,3 @@ vim.o.foldtext = ""
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
-
--- Dynamic keymapping for fold preview or LSP hover
-vim.keymap.set('n', 'K', function()
-    local winid = require('ufo').peekFoldedLinesUnderCursor()
-    if not winid then
-        vim.lsp.buf.hover()
-    end
-end)
