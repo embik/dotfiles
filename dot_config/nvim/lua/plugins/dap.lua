@@ -1,7 +1,6 @@
 return {
     {
         "mfussenegger/nvim-dap",
-        version = "*",
         lazy = true,
         keys = {
             { '<F5>', '<cmd>lua require("dap").continue()<cr>', desc = "Debug Continue" },

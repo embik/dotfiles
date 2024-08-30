@@ -1,13 +1,11 @@
 return {
     {
         "fredrikaverpil/neotest-golang",
-        version = '*',
         lazy = true,
         ft = "go",
     },
     {
       "nvim-neotest/neotest",
-      version = '*',
       lazy = true,
       dependencies = {
         "nvim-neotest/nvim-nio",

@@ -1,4 +1,6 @@
 return {
+    { "nvim-tree/nvim-web-devicons", lazy = true, branch = "master" },
+    { 'nvim-lua/plenary.nvim', lazy = true, branch = "master" },
     { "stevearc/dressing.nvim", event = "VeryLazy" },
     {
     'nvim-telescope/telescope.nvim',
@@ -21,7 +23,6 @@ return {
   { "nvim-tree/nvim-web-devicons", lazy = true },
   {
     "nvim-tree/nvim-tree.lua",
-    version = "*",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
@@ -43,7 +44,6 @@ return {
 },
 {
   "folke/which-key.nvim",
-  version = "*",
   event = "VeryLazy",
   opts = {
     -- your configuration comes here

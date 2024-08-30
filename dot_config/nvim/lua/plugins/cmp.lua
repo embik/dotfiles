@@ -1,6 +1,7 @@
 return {
   {
     "hrsh7th/nvim-cmp",
+    branch = "main",
     event = 'InsertEnter',
     -- these dependencies will only be loaded when cmp loads
     -- dependencies are always lazy-loaded unless specified otherwise
