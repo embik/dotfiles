@@ -79,6 +79,19 @@ return {
             { "<leader>fvb", "<Cmd>lua require('telescope.builtin').git_branches()<cr>",         desc = "Git Branches" },
             { "<leader>fvs", "<Cmd>lua require('telescope.builtin').git_status()<cr>",           desc = "Git Status" },
         },
+        opts = {
+            defaults = {
+                mappings = {
+                    n = {
+                        ['<c-d>'] = require('telescope.actions').delete_buffer
+                    },
+                    i = {
+                        ["<C-h>"] = "which_key",
+                        ['<c-d>'] = require('telescope.actions').delete_buffer
+                    },
+                },
+            },
+        },
     },
     {
         { "nvim-tree/nvim-web-devicons", lazy = true },
